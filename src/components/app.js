@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
 
-import MovieList from "./MovieList"
 import NavBar from "./NavBar";
+import MovieList from "./MovieList"
+import MovieForm from "./MovieForm"
 
 const App = () => {
   const [movies, setMovies] = useState([])
@@ -22,6 +23,7 @@ const App = () => {
     <div className="app">
       <NavBar movies={movies}/>
       <MovieList movies={movies}/>
+      <MovieForm />
     </div>
   );
 }
