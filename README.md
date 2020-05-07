@@ -1,5 +1,3 @@
-# React/Redux/Router Starter Project
+#React Movie List
 
-> Provided for the students of the [Bottega Code School](https://bottega.tech/)
-
-*Fork from [es6-webpack2-starter](https://github.com/micooz/es6-webpack2-starter)*
+This is the front end app for a movie list. It renders the list of movies that can be added or deleted from this app. This is ment to be a practice for skill develpment. 
