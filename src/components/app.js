@@ -9,7 +9,8 @@ const App = () => {
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/v1/movies')
+    // axios.get('http://localhost:5000/api/v1/movies')
+    axios.get('https://flask-movie-list-api-tah.herokuapp.com/api/v1/movies')
       .then(res => {
         console.log(res)
         setMovies(res.data)
@@ -38,7 +39,8 @@ const App = () => {
       const flask_database = await axios(
         {
           method: "post",
-          url: 'http://localhost:5000/api/v1/movie',
+          // url: 'http://localhost:5000/api/v1/movie',
+          url: 'https://flask-movie-list-api-tah.herokuapp.com/api/v1/movie',
           data: {
             title: title,
             genre: genre,
@@ -59,7 +61,8 @@ const App = () => {
   }
 
   const deleteMovie = (id) => {
-    axios.delete(`http://localhost:5000/api/v1/movie/${id}`)
+    // axios.delete(`http://localhost:5000/api/v1/movie/${id}`)
+    axios.delete(`https://flask-movie-list-api-tah.herokuapp.com/api/v1/movie/${id}`)
       .then(res => {
         console.log(res)
         setMovies(movies.filter(movie => movie.id !== id))
